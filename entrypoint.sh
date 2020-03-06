@@ -1,12 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
-# install depends for dotnet core
-apk add --no-cache libstdc++ libintl icu
+zipFile=https://github.com/microsoft/ApplicationInspector/releases/download/v1.4.4/ApplicationInspector_linux_1.1.4.zip
 
-# install bash
-apk add --update bash
+curl $zipFile > /app/code-to-scan.zip && \
+    ls -la && \
+    unzip /app/code-to-scan.zip
 
-cd /AppInspector
-
-chmod +x ./ApplicationInspector.CLI
-./ApplicationInspector.CLI analyze
+dotnet /app/ApplicationInspector/ApplicationInspector.CLI.dll analyze -s /app/code-to-scan -b -x high
