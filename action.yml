@@ -1,0 +1,15 @@
+name: 'ApplicationInspector action'
+description: 'Run the 'analyze' scan using Microsoft ApplicationInspector on inputted source code path.'
+inputs:
+  source-code-path:  # source code path
+    description: 'Path to source code in zip file format. Must be internet accessible.'
+    required: true
+    default: 'https://github.com/microsoft/ApplicationInspector/tree/master/AppInspector'
+outputs:
+  time: # id of output
+    description: 'Analyzed source code results.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.source-code-path }}
