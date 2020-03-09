@@ -10,6 +10,8 @@ RUN curl -L https://github.com/microsoft/ApplicationInspector/releases/download/
     unzip appinspect.zip && \
     mv /app/ApplicationInspector_${VERSION}/ /app/ApplicationInspector
 
+RUN apt install git-all -y
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]

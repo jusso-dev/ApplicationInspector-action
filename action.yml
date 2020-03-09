@@ -6,7 +6,7 @@ inputs:
     required: true
     default: 'https://github.com/microsoft/ApplicationInspector/tree/master/AppInspector'
 outputs:
-  time: # id of output
+  scan-results: # id of output
     description: 'Analyzed source code results.'
 runs:
   using: 'docker'

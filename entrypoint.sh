@@ -1,9 +1,9 @@
 #!/bin/bash
 
-zipFile=https://github.com/microsoft/ApplicationInspector/releases/download/v1.4.4/ApplicationInspector_linux_1.1.4.zip
+zipFile=https://github.com/microsoft/ApplicationInspector.git
 
-curl $zipFile > /app/code-to-scan.zip && \
-    ls -la && \
-    unzip /app/code-to-scan.zip
+git clone $zipFile code-to-scan
 
 dotnet /app/ApplicationInspector/ApplicationInspector.CLI.dll analyze -s /app/code-to-scan -b -x high
+
+echo ::set-output scan-results=ApplicationInspector/output.json
