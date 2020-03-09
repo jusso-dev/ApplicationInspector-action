@@ -1,6 +1,6 @@
 #!/bin/bash
 
-zipFile=https://github.com/microsoft/ApplicationInspector.git
+zipFile=$1
 
 git clone $zipFile code-to-scan
 
