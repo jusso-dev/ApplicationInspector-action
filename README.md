@@ -12,7 +12,7 @@ Github Action for Microsoft ApplicationInspector
 
 ### `results`
 
-Source code 'analyze' results.
+Source code 'analyzed' results.
 
 ## Example usage
 
