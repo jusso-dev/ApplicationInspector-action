@@ -19,5 +19,5 @@ Source code 'analyze' results.
 ```yaml
 uses: jusso-dev/ApplicationInspector-action@master
 with:
-  source-code-oath: 'https://github.com/microsoft/ApplicationInspector/tree/master/AppInspector'
+  source-code-path: 'https://github.com/microsoft/ApplicationInspector/tree/master/AppInspector'
 ```
